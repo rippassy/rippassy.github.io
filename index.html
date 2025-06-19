@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect - Rip Passy</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #e0f7ff;  /* light blue background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.85);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      padding: 3rem 2rem;
+      max-width: 90%;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .message {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .redirect-link {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      position: relative;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .redirect-link::after {
+      content: ' ↗';
+      font-size: 0.8em;
+    }
+    .redirect-link:hover {
+      transform: scale(1.05) translateY(-2px);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .redirect-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #2575fc, #6a11cb);
+      border-radius: 2px;
+      animation: pulseUnderline 2s ease infinite;
+    }
+    @keyframes pulseUnderline {
+      0%,100% { opacity: 0.4; transform: scaleX(1); }
+      50%     { opacity: 1; transform: scaleX(1.2); }
+    }
+
+    .flourish {
+      font-size: 4rem;
+      margin-bottom: -0.5rem;
+      color: #2575fc;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="flourish">❦</div>
+    <p class="message">
+      We’ve moved! Please follow the link below to visit Rip Passy's official website.
+    </p>
+    <a
+      class="redirect-link"
+      href="https://allinhouseent.com/rip-passy"
+      target="_blank"
+      rel="noopener"
+    >
+      allinhouseent.com/rip-passy
+    </a>
+  </div>
+</body>
+</html>
