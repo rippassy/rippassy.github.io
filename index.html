@@ -25,6 +25,7 @@
       backdrop-filter: blur(8px);
       animation: fadeIn 1s ease forwards;
       opacity: 0;
+      position: relative;
     }
     @keyframes fadeIn {
       to { opacity: 1; }
@@ -48,6 +49,7 @@
       position: relative;
       text-decoration: none;
       transition: transform 0.2s;
+      margin-bottom: 2rem;
     }
     .redirect-link::after {
       content: ' ↗';
@@ -79,6 +81,20 @@
       color: #2575fc;
       opacity: 0.3;
     }
+
+    /* New contact note */
+    .contact-note {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .contact-note a {
+      color: #2575fc;
+      text-decoration: none;
+    }
+    .contact-note a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -95,6 +111,10 @@
     >
       allinhouseent.com/rip-passy
     </a>
+    <div class="contact-note">
+      For questions about this website & domain, please email me at
+      <a href="mailto:henry@rippassy.com">henry@rippassy.com.</a> 
+    </div>
   </div>
 </body>
 </html>
